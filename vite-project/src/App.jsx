@@ -2,7 +2,6 @@ import React from "react";
 import Navbar from "./component/Navbar";
 import Content from "./component/Content";
 import ImageSection from "./component/ImageSection";
-import Half from "./component/Half";
 
 const App = () => {
   return (
