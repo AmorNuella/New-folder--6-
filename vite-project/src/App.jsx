@@ -1,27 +1,31 @@
 import React from "react";
+import About from "./Pages/About";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Features from "./Pages/Features";
+import Layout from "./component/Layout";
 import Contact from "./Pages/Contact";
-/*import Navbar from "./component/Navbar";
-import Content from "./component/Content";
-import ImageSection from "./component/ImageSection";
-import Half from "./component/Half";*/
+import Work from "./Pages/Work";
+
+import More from "./Pages/More";
+import MyForm from "./Pages/MyForm";
+import Home from "./component/Home";
 
 const App = () => {
   return (
-    <div>
-      {/*
-    <div className=" w-full h-full max-sm:w-full max-sm:h-screen max-sm:ml-2 ">
-      <div className="h-96 w-46  bg-slate-400 float-right relative"></div>
-      <Half />
-      <div className="">
-        <Navbar />
-        <div className="flex w-full h-max my-8 items-start justify-start m-auto absolute max-md:flex-col-reverse max-md:items-center max-md:justify-center ">
-          <Content />
-          <ImageSection />
-        </div>
-      </div>
-  </div>*/}
-      <Contact />
-    </div>
+    <Router>
+      {/*route for the list*/}
+      <Routes>
+        <Route path="/" exact element={<Layout />}>
+          <Route path="/" exact element={<Home />} />
+          <Route path="/about" exact element={<About />} />
+          <Route path="/more" exact element={<More />} />
+          <Route path="/myform" exact element={<MyForm />} />
+          <Route path="/contact" exact element={<Contact />} />
+          <Route path="/features" exact element={<Features />} />
+          <Route path="/work" exact element={<Work />} />
+        </Route>
+      </Routes>
+    </Router>
   );
 };
 

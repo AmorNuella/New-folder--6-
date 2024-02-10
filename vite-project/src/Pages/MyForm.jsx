@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import Homee from "../assets/computer-icons-home-house-martinez-building-house-removebg-preview.png";
 
 function MyForm() {
   const [firstName, setFirstName] = useState("");
@@ -75,13 +77,22 @@ function MyForm() {
           required
         />
         <br />
-        <button
-          type="submit"
-          className="w-40 h-16  bg-black rounded-full  text-white p-3 mt-8 my-7"
-        >
-          Contact Us
-        </button>
-        {error && <p className="error">{error}</p>}
+        <div className="flex">
+          <button
+            type="submit"
+            className="w-40 h-16   font-bold mx-10 bg-black rounded-full  text-white p-3 mt-8 my-7"
+          >
+            Submit
+          </button>
+          {error && <p className="error">{error}</p>}
+
+          <div className="w-40 h-16   bg-white rounded-full    p-3 mt-8 my-7">
+            <Link to="/" className="flex">
+              <img src={Homee} alt="" className="px-2 w-10 h-5" />
+              <p className="text-orange-400 font-bold">Home</p>
+            </Link>
+          </div>
+        </div>
       </div>
     </form>
   );
