@@ -4,7 +4,7 @@ import Logo from "../assets/logo.svg";
 
 function Navbar() {
   return (
-    <div className=" navbar max-md:ml-40 w-full flex justify-between px-16 mx-10 my-5 max-sm:mx-1 max-sm:px-0 max-sm:my-1">
+    <div className=" navbar max-md:ml-40 w-full flex justify-between px-16 mx-10 my-5 max-sm:mx-1 max-sm:px-0 max-sm:my-1 max-sm:ml-2">
       <div className="navbar-start max-sm:ml-12 ml-12">
         {/* Image logo */}
         <a className="sm:ml-0">
@@ -40,7 +40,7 @@ function Navbar() {
         <div tabIndex={0} role="button" className="  btn btn-ghost md:hidden">
           <img src={MenuIcon} alt="menu-icon" className="" />
         </div>
-        {/* Mobile */}
+        {/* Mobile nav list */}
         <ul
           tabIndex={0}
           className=" uppercase menu menu-lg dropdown-content mt-3 z-[1] px-3 py-3 rounded-none shadow-xl bg-base-100 w-72 mr-5 items-center"
